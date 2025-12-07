@@ -1,0 +1,34 @@
+{
+  "sections": [
+    {
+      "section_number": 1,
+      "section_title": "Section 1",
+      "questions": [
+        {
+          "question": "What is the primary function of mitochondria in a cell?",
+          "options": {
+            "A": "Protein synthesis",
+            "B": "Energy production through ATP",
+            "C": "DNA replication",
+            "D": "Waste removal"
+          },
+          "correct_answer": "B",
+          "explanation": "Mitochondria are known as the powerhouses of the cell because they produce ATP through cellular respiration."
+        },
+        {
+          "question": "Which of the following is NOT a type of RNA?",
+          "options": {
+            "A": "mRNA",
+            "B": "tRNA",
+            "C": "rRNA",
+            "D": "dRNA"
+          },
+          "correct_answer": "D",
+          "explanation": "dRNA is not a type of RNA. The main types are mRNA (messenger), tRNA (transfer), and rRNA (ribosomal)."
+        }
+      ]
+    }
+  ],
+  "total_sections": 1
+}
+

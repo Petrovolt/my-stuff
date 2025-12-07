@@ -71,17 +71,27 @@ def upload_file():
             'total_questions': sum(len(section['questions']) for section in questions_data['sections'])
         })
     
+    except ValueError as e:
+        # Clean up file on error
+        if 'filepath' in locals() and os.path.exists(filepath):
+            os.remove(filepath)
+        error_message = str(e)
+        print(f"Configuration error: {error_message}")
+        return jsonify({'error': error_message}), 500
     except Exception as e:
         # Clean up file on error
-        if os.path.exists(filepath):
+        if 'filepath' in locals() and os.path.exists(filepath):
             os.remove(filepath)
-        print(f"Error processing file: {str(e)}")
-        return jsonify({'error': f'Error processing file: {str(e)}'}), 500
+        error_message = str(e)
+        print(f"Error processing file: {error_message}")
+        import traceback
+        traceback.print_exc()  # Print full traceback to console
+        return jsonify({'error': f'Error processing file: {error_message}'}), 500
 
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({'status': 'healthy'})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=8080)
 
