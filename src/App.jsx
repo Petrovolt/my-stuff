@@ -105,9 +105,12 @@ function App() {
       }`}>
         <div className="max-w-7xl mx-auto px-6 md:px-8 py-5">
           <div className="flex items-center justify-between">
-            <div className="display-font text-3xl tracking-tight">
-              <span className="text-slate-50">NOTE</span>
-              <span className="gold-accent">QUEST</span>
+            <div className="flex items-center gap-3">
+              <img src="NoteQuest.png" className="h-10 w-auto" />
+              <div className="display-font text-3xl tracking-tight">
+                <span className="text-slate-50">NOTE</span>
+                <span className="gold-accent">QUEST</span>
+              </div>
             </div>
             <div className="hidden md:flex items-center gap-10">
               <button
